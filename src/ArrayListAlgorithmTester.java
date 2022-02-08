@@ -5,20 +5,20 @@ public class ArrayListAlgorithmTester
 {
     public static void main(String[] args)
     {
-        ArrayList<String> stringList3 = new ArrayList<String>(Arrays.asList("these", "sly", "words", "pork", "ugly", "you", "contains", "umm", "by", "several", "sky", "words", "psh", "apple"));
-        ArrayListAlgorithms.wackyVowels(stringList3);
-        System.out.println(stringList3);
+        String mySentence = "This is my sentence!";
+        ArrayList<String> reversedWords = ArrayListAlgorithms.parseWordsAndReverse(mySentence);
+        System.out.println(reversedWords);
 
-        ArrayList<String> stringList4 = new ArrayList<String>(Arrays.asList("sly", "ugly", "umm", "psh"));
-        ArrayListAlgorithms.wackyVowels(stringList4);
-        System.out.println(stringList4);
+        String mySentence2 = "It is a lovely day outside today don't you think?";
+        ArrayList<String> reversedWords2 = ArrayListAlgorithms.parseWordsAndReverse(mySentence2);
+        System.out.println(reversedWords2);
 
-        ArrayList<String> stringList5 = new ArrayList<String>(Arrays.asList("these", "words", "pork", "contains"));
-        ArrayListAlgorithms.wackyVowels(stringList5);
-        System.out.println(stringList5);
-
+        String mySentence3 = "Hello";
+        ArrayList<String> reversedWords3 = ArrayListAlgorithms.parseWordsAndReverse(mySentence3);
+        System.out.println(reversedWords3);
     }
 }
+
 
 
 
