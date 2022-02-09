@@ -322,7 +322,7 @@ public class ArrayListAlgorithms {
     public static ArrayList<Integer> modes(int[] numList)
     {
         ArrayList<Integer> resultMode = new ArrayList<Integer>();
-        ArrayList;
+        ArrayList<Integer>
 
     }
 
