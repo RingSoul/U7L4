@@ -322,8 +322,50 @@ public class ArrayListAlgorithms {
     public static ArrayList<Integer> modes(int[] numList)
     {
         ArrayList<Integer> resultMode = new ArrayList<Integer>();
-        ArrayList<Integer>
+        int maxCounter = 0;
+        int tempCounter = 0;
+        for (int i = 0; i < numList.length; i++)
+        {
+            int currentNum = numList[i];
+            for (int x = 0; x < numList.length; x++)
+            {
+                if (currentNum == numList[x])
+                {
+                    tempCounter++;
+                }
+            }
 
+            if (tempCounter != 1)
+            {
+                boolean alreadyExist = false;
+                for (int z = 0; z < resultMode.size(); z++)
+                {
+                    if (resultMode.get(z) == currentNum)
+                    {
+                        alreadyExist = true;
+                        break;
+                    }
+                }
+                if (!alreadyExist) {
+                    if (tempCounter > maxCounter)
+                    {
+                        while (resultMode.size() != 0)
+                        {
+                            resultMode.remove(0);
+                        }
+                        resultMode.add(currentNum);
+                        maxCounter = tempCounter;
+                    }
+                    else if (tempCounter == maxCounter)
+                    {
+                        resultMode.add(currentNum);
+                        maxCounter = tempCounter;
+                    }
+                }
+            }
+            tempCounter = 0;
+        }
+        return resultMode;
     }
 
 
