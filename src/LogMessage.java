@@ -14,10 +14,10 @@ public class LogMessage
      */
     public boolean containsWord(String keyword)
     {
-        /*
-        Sample solution:
+
+        // Sample solution:
         String newDes = " " + description + " ";
-        if (newDes.indexOf(keyword) != -1)
+        if (newDes.indexOf(" " + keyword + " ") != -1)
         {
             return true;
         }
@@ -25,7 +25,9 @@ public class LogMessage
         {
             return false;
         }
-        */
+
+        /* faulty solution: only works as intended when disk appears EXACTLY ONCE in the description
+           i.e. fails the third test (out of the 8)
         int beginning = 0;
         int end = description.length() - keyword.length();
         int index = description.indexOf(keyword);
@@ -74,10 +76,17 @@ public class LogMessage
                 return false;
             }
         }
+        */
     }
     public String getMachineId()
     { return machineId; }
     public String getDescription()
     { return description; }
 // There may be instance variables, constructors, and methods that are not shown.
+
+    // added toString method for testing purposes
+    public String toString()
+    {
+        return "ID: " + machineId + "---Description: " + description;
+    }
 }

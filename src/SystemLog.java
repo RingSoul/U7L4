@@ -31,4 +31,10 @@ public class SystemLog
         return removed;
     }
 // There may be instance variables, constructors, and methods that are not shown.
+
+    // added constructor for testing purposes
+    public SystemLog(ArrayList<LogMessage> list)
+    {
+        messageList = list;
+    }
 }
